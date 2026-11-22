@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#174a32">
+  <meta name="description" content="Order fresh Cameroonian meals, drinks and snacks from MAMA’s FOOD in Youpwe, Douala. Pre-order for faster delivery.">
+  <title>MAMA’s FOOD — Fresh meals in Douala</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">Freshly prepared with care · Serving Youpwe and Douala</div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="MAMA’s FOOD home"><span class="brand-mark">M</span><span>MAMA’s <b>FOOD</b><small>HOME-STYLE CAMEROONIAN KITCHEN</small></span></a>
+    <nav aria-label="Main navigation"><a href="#menu">Menu</a><a href="#how-it-works">How to order</a><a href="#contact">Contact</a></nav>
+    <button class="cart-trigger" id="open-cart" type="button">Your order <span id="cart-count">0</span></button>
+  </header>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy"><span class="eyebrow">A taste of home, made fresh</span><h1>Good food.<br><em>Good feeling.</em></h1><p>Enjoy generous portions of Cameroonian favourites, freshly prepared to order in Youpwe, Douala.</p><div class="hero-actions"><a class="button button-primary" href="#menu">Explore the menu <span aria-hidden="true">↗</span></a><a class="text-link" href="tel:+237671561515">Call to order: 671 561 515</a></div><div class="hero-note"><span class="note-icon">✦</span>Pre-order to help us get your meal to you faster.</div></div>
+      <div class="hero-art" aria-label="Illustration of a fresh meal"><div class="sun"></div><div class="plate"><div class="plate-food food-one"></div><div class="plate-food food-two"></div><div class="plate-food food-three"></div><span class="leaf leaf-a">✦</span><span class="leaf leaf-b">✦</span></div><div class="art-label">Made with love<br><b>in Douala</b></div></div>
+    </section>
+    <section class="benefits" aria-label="Our service"><div><span>01</span><p><b>Prepared fresh</b><small>Made when you order</small></p></div><div><span>02</span><p><b>Generous portions</b><small>Good food to share</small></p></div><div><span>03</span><p><b>Easy to order</b><small>Online, WhatsApp or call</small></p></div></section>
+    <section class="menu-section section-wrap" id="menu">
+      <div class="section-heading"><div><span class="eyebrow">From our kitchen</span><h2>Choose your favourites</h2><p>Large portions · Prices in XAF (FCFA)</p></div><label class="search-box"><span aria-hidden="true">⌕</span><input id="menu-search" type="search" placeholder="Find a dish..." aria-label="Search menu"></label></div>
+      <div class="category-tabs" role="tablist" aria-label="Menu categories"><button class="category-tab active" data-category="all" type="button">All</button><button class="category-tab" data-category="meals" type="button">Meals</button><button class="category-tab" data-category="drinks" type="button">Drinks</button><button class="category-tab" data-category="snacks" type="button">Snacks</button></div>
+      <div class="menu-grid" id="menu-grid" aria-live="polite"></div>
+      <div class="custom-request"><div><span class="eyebrow">Have something else in mind?</span><h3>Ask us to prepare your favourite.</h3><p>Send a special meal request. We’ll confirm availability and price with you before preparing it.</p></div><button class="button button-outline" id="custom-request-button" type="button">Request a custom meal <span>↗</span></button></div>
+    </section>
+    <section class="order-info" id="how-it-works"><div class="section-wrap info-inner"><div><span class="eyebrow">Simple and convenient</span><h2>Your meal, your way.</h2><p>Choose your food, tell us where and when you need it, then confirm with our team.</p></div><div class="steps"><article><span>1</span><h3>Choose</h3><p>Add meals, drinks and snacks to your order.</p></article><article><span>2</span><h3>Tell us</h3><p>Share your location and any special instructions.</p></article><article><span>3</span><h3>Confirm</h3><p>We’ll confirm delivery cost, timing and payment details.</p></article></div></div></section>
+    <section class="contact-strip section-wrap" id="contact"><div><span class="eyebrow">We’re happy to help</span><h2>Let’s get you fed.</h2><p>MAMA’s FOOD · Youpwe, Douala, Cameroon</p><p class="owner-line">Owned by Ms. ITOE HELLEN</p></div><div class="contact-actions"><a class="button button-primary" href="https://wa.me/237671561515" target="_blank" rel="noopener">WhatsApp us <span>↗</span></a><a class="button button-outline" href="tel:+237671561515">Call 671 561 515</a></div></section>
+  </main>
+  <footer><a class="brand brand-footer" href="#home"><span class="brand-mark">M</span><span>MAMA’s <b>FOOD</b><small>MADE WITH LOVE IN DOUALA</small></span></a><p>© <span id="year"></span> MAMA’s FOOD · Youpwe, Douala · Cameroon</p><a href="#menu">Back to menu ↑</a></footer>
+  <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-labelledby="cart-title" aria-modal="true" role="dialog" aria-hidden="true"><div class="drawer-header"><div><span class="eyebrow">MAMA’s FOOD</span><h2 id="cart-title">Your order</h2></div><button class="icon-button" id="close-cart" aria-label="Close order" type="button">×</button></div><div id="cart-items" class="cart-items"></div><div class="cart-empty" id="cart-empty"><span>♡</span><p>Your basket is waiting for something delicious.</p><button class="text-link" id="continue-shopping" type="button">Browse the menu</button></div><div class="checkout" id="checkout" hidden>
+    <form id="order-form"><label>Your name<input name="customerName" required autocomplete="name" placeholder="Name for the order"></label><label>Phone number<input name="phone" required type="tel" autocomplete="tel" placeholder="Your phone number"></label><label>Delivery location<textarea name="location" required rows="2" placeholder="Neighbourhood, landmark, or pickup"></textarea></label><label>When do you need it?<select name="timing"><option>ASAP (confirm availability)</option><option>Pre-order for later</option></select></label><label>Payment preference<select name="payment"><option>MTN Mobile Money</option><option>Orange Money</option><option>Bank card (confirm with vendor)</option></select></label><label>Special instructions <span class="optional">(optional)</span><textarea name="instructions" rows="2" placeholder="Pepper, ingredients, or preparation preferences"></textarea></label><div class="payment-note"><b>50% deposit</b><span>A 50% deposit is requested before preparation; the balance is due when your food is delivered. We’ll send payment instructions and confirm the delivery fee directly. No payment is collected on this website.</span></div><div class="totals"><div><span>Food subtotal</span><b id="subtotal">0 XAF</b></div><div><span>Deposit estimate (50% of food)</span><b id="deposit">0 XAF</b></div><small>Delivery fee is confirmed by the vendor based on your location.</small></div><button class="button button-primary submit-order" type="submit">Send order via WhatsApp <span>↗</span></button><p class="form-footnote">Your order is not confirmed until the kitchen replies.</p></form>
+  </div></aside>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js" defer></script>
+</body>
+</html>
